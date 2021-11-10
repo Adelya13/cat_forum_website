@@ -11,7 +11,7 @@
         <div class="card" >
             <div class="card-header">
                 <h3>${tittle}</h3>
-                <a href="<c:url value="/user?id=${post.authorId}"/>" style="text-decoration: none; color: black;">
+                <a href="<c:url value="/user?id=${authorId}"/>" style="text-decoration: none; color: black;">
                     <h6>автор: ${authorName}</h6>
                 </a>
             </div>

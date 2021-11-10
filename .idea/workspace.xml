@@ -28,151 +28,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1362f05b-2b91-44db-a2b9-549e9c2164c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/AddCatServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/EditProfileServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/ForumServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/PostServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/ProfileServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/entities/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/entities/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/entities/DbFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/entities/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/entities/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/exceptions/NotFoundBodyInPostException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/exceptions/NotFoundFileException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/exceptions/NotFoundPostException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/exceptions/NotFoundTagException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/filters/AddCatFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/filters/EditProfileFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/filters/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/filters/ForumFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/filters/PostFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/filters/ProfileFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/inside/query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/CatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/FileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/PostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/TagRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/interfaces/ICatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/interfaces/ICommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/interfaces/IFileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/interfaces/IPostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/interfaces/IRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/interfaces/ITagRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/interfaces/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/CatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/FileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/PostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/ShowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/TagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/interfaces/ICatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/interfaces/ICommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/interfaces/IFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/interfaces/IPostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/interfaces/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/interfaces/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/systems/DbSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/cat.tag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/comment.tag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/header.tag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/post.tag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addCat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editprofile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/forum.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/post.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/cat_avatars/default_cat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/178a6e90-66cf-4928-8e38-8da4ccc16c2a.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/55232b48-68f7-468a-8a23-699518d8946b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/5ea5bf90-640b-46ea-877d-7a3e8101b2e7.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/80291416-8d58-4764-898c-da440c2f5dd0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/83ed589b-7962-4d3e-ab44-a5e5cac0f15f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/bd468a40-9eec-4105-9f84-06c156f404a7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/default.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/photo/user_avatars/f8fcafa3-f198-4304-87c4-82aa890d0fb0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_14222_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_16379_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_19188_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_25041_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_49122_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_71522_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_82718_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_84559_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_94728_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_2_97207_-1258952105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/posts/post_5_82975_1400284487.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f1b66b35-c74c-4713-ad7c-281804d18626.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f1b66b35-c74c-4713-ad7c-281804d18626.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f1b66b35-c74c-4713-ad7c-281804d18626/storage_v2/_src_/database/webapp_db.sLOt0w/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f1b66b35-c74c-4713-ad7c-281804d18626/storage_v2/_src_/database/webapp_db.sLOt0w/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/FirstServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/MainServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/SignInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/SignInServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/data/DBAssistant1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/data/DBAssistant1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/data/IRegistrationSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/AddCatServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/AddCatServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/EditProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/EditProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/ForumServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/ForumServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/PostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/controllers/PostServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/data/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/data/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/data/RegistrationSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/exceptions/IllegalDataException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/exceptions/IllegalEmailException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/exceptions/IllegalPasswordException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/filters/SecurityFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/IRegistrationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/RegistrationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/servies/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/main.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/project.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/controllers/FirstServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/TagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/servlets/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/header.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/header.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/post.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/post.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editprofile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/post.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/controllers/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/controllers/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/controllers/MainServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/controllers/SignInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/controllers/SignInServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/data/DBAssistant1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/data/DBAssistant1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/data/IRegistrationSystem.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/data/Queries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/data/Queries.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/data/RegistrationSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/data/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/exceptions/IllegalDataException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/exceptions/IllegalEmailException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/exceptions/IllegalPasswordException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/filters/SecurityFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/servies/IRegistrationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/servies/RegistrationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/servies/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/servlets/servies/SecurityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/controllers/FirstServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/controllers/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/controllers/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/controllers/MainServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/controllers/SignInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/controllers/SignInServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/data/DBAssistant1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/data/DBAssistant1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/data/IRegistrationSystem.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/data/Queries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/data/Queries.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/data/RegistrationSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/data/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/exceptions/IllegalDataException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/exceptions/IllegalEmailException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/exceptions/IllegalPasswordException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/filters/SecurityFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/servies/IRegistrationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/servies/RegistrationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/servies/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/classes/ru/kpfu/servlets/servies/SecurityService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/view/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/view/_header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/view/main.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/view/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/view/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/home_work1-1.0/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/home_work1-1.0/css/project.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +228,7 @@
       <workItem from="1635788368031" duration="18539000" />
       <workItem from="1636217320430" duration="60406000" />
       <workItem from="1636384565759" duration="22411000" />
-      <workItem from="1636439456355" duration="50909000" />
+      <workItem from="1636439456355" duration="57817000" />
     </task>
     <servers />
   </component>
@@ -420,54 +296,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1635881746787" />
-    <state width="1118" height="2" key="GridCell.Tab.0.bottom" timestamp="1636508785526">
+    <state width="1118" height="303" key="GridCell.Tab.0.bottom" timestamp="1636533806280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1636508785526" />
-    <state width="1118" height="2" key="GridCell.Tab.0.center" timestamp="1636508785525">
+    <state width="1118" height="303" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1636533806280" />
+    <state width="1118" height="303" key="GridCell.Tab.0.center" timestamp="1636533806280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1636508785525" />
-    <state width="1118" height="2" key="GridCell.Tab.0.left" timestamp="1636508785518">
+    <state width="1118" height="303" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1636533806280" />
+    <state width="1118" height="303" key="GridCell.Tab.0.left" timestamp="1636533806280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1636508785517" />
-    <state width="1118" height="2" key="GridCell.Tab.0.right" timestamp="1636508785525">
+    <state width="1118" height="303" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1636533806280" />
+    <state width="1118" height="303" key="GridCell.Tab.0.right" timestamp="1636533806280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1636508785525" />
-    <state width="1118" height="2" key="GridCell.Tab.1.bottom" timestamp="1636508785531">
+    <state width="1118" height="303" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1636533806280" />
+    <state width="1118" height="303" key="GridCell.Tab.1.bottom" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1636508785531" />
-    <state width="1118" height="2" key="GridCell.Tab.1.center" timestamp="1636508785530">
+    <state width="1118" height="303" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
+    <state width="1118" height="303" key="GridCell.Tab.1.center" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1636508785530" />
-    <state width="1118" height="2" key="GridCell.Tab.1.left" timestamp="1636508785530">
+    <state width="1118" height="303" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
+    <state width="1118" height="303" key="GridCell.Tab.1.left" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1636508785530" />
-    <state width="1118" height="2" key="GridCell.Tab.1.right" timestamp="1636508785530">
+    <state width="1118" height="303" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
+    <state width="1118" height="303" key="GridCell.Tab.1.right" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1636508785530" />
-    <state width="1118" height="2" key="GridCell.Tab.2.bottom" timestamp="1636508785530">
+    <state width="1118" height="303" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
+    <state width="1118" height="303" key="GridCell.Tab.2.bottom" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1636508785530" />
-    <state width="1118" height="2" key="GridCell.Tab.2.center" timestamp="1636508785527">
+    <state width="1118" height="303" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
+    <state width="1118" height="303" key="GridCell.Tab.2.center" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1636508785527" />
-    <state width="1118" height="2" key="GridCell.Tab.2.left" timestamp="1636508785527">
+    <state width="1118" height="303" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
+    <state width="1118" height="303" key="GridCell.Tab.2.left" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1636508785527" />
-    <state width="1118" height="2" key="GridCell.Tab.2.right" timestamp="1636508785529">
+    <state width="1118" height="303" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
+    <state width="1118" height="303" key="GridCell.Tab.2.right" timestamp="1636533221748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="2" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1636508785529" />
+    <state width="1118" height="303" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1636533221748" />
     <state x="263" y="106" key="IDE.errors.dialog" timestamp="1634717603019">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -484,10 +360,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="577" y="251" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1635258301875" />
-    <state x="655" y="125" width="612" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1636492281143">
+    <state x="479" y="184" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1636533690829">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="655" y="125" width="612" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1636492281143" />
+    <state x="479" y="184" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.728@0.0.1366.728" timestamp="1636533690829" />
+    <state x="655" y="125" width="612" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1636533789050">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="655" y="125" width="612" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1636533789050" />
     <state x="408" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1636217869036">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -500,10 +380,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="18" key="editAsTableFormatDialogDimension/0.0.1366.728@0.0.1366.728" timestamp="1633511183654" />
-    <state x="453" y="169" key="extract.method.dialog" timestamp="1636461069746">
+    <state x="453" y="169" key="extract.method.dialog" timestamp="1636529217169">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="453" y="169" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1636461069746" />
+    <state x="453" y="169" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1636529217169" />
     <state x="65" y="0" key="new project wizard" timestamp="1635881795083">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

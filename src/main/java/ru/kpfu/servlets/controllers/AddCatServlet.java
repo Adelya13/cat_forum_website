@@ -39,6 +39,11 @@ public class AddCatServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if(req.getParameter("status") != null){
+            if(req.getParameter("status").equals("1")){
+                req.setAttribute("catmessage", "Котик был добавлен");
+            }
+        }
         HttpSession session = req.getSession();
         String email= (String) session.getAttribute("email");
         Optional<User> userOptional = userService.findByEmail(email);
@@ -68,7 +73,7 @@ public class AddCatServlet extends HttpServlet {
                 System.out.println(user.getId());
                 Cat cat = new Cat(catname,description,user);
                 catService.save(cat);
-                resp.sendRedirect(req.getContextPath()+"/addCat");
+                resp.sendRedirect(req.getRequestURI()+"?status=1");
                 return;
             }
             else {
@@ -77,7 +82,6 @@ public class AddCatServlet extends HttpServlet {
 
         }
         req.setAttribute("catmessage",catmessage);
-        req.setAttribute("message",message);
         getServletContext().getRequestDispatcher("/WEB-INF/view/addCat.jsp").forward(req, resp);
     }
 

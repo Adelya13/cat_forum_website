@@ -10,7 +10,7 @@ public class Queries {
 
     public static String UPDATE_USER =
             "update public.user" +
-                    " set username = ? , email = ?, avatar_path = ?" +
+                    " set username = ? , email = ?" +
                     "where id=?;";
 
     public static String UPDATE_AVATAR =

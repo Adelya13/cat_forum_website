@@ -1,39 +1,28 @@
 package ru.kpfu.servlets.controllers;
 
-import ru.kpfu.servlets.entities.Cat;
-import ru.kpfu.servlets.entities.DbFile;
-import ru.kpfu.servlets.entities.Post;
+
 import ru.kpfu.servlets.entities.User;
 import ru.kpfu.servlets.exceptions.DuplicateDataException;
-import ru.kpfu.servlets.exceptions.NotFoundBodyInPostException;
-import ru.kpfu.servlets.servies.CatService;
-import ru.kpfu.servlets.servies.FileService;
-import ru.kpfu.servlets.servies.PostService;
 import ru.kpfu.servlets.servies.UserService;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.Optional;
 
 @WebServlet("/edit")
-@MultipartConfig
 public class EditProfileServlet extends HttpServlet {
     private UserService userService;
     private User user;
-    private FileService fileService;
+   // private FileService fileService;
 
     @Override
     public void init(){
         this.userService = new UserService();
-        this.fileService = new FileService();
+        //this.fileService = new FileService();
 
     }
 
@@ -41,7 +30,7 @@ public class EditProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("status") != null){
             if(req.getParameter("status").equals("1")){
-                req.setAttribute("message", "Пост был отправлен");
+                req.setAttribute("message", "Изменения успешно внесены");
             }
         }
         HttpSession session = req.getSession();
@@ -52,8 +41,6 @@ public class EditProfileServlet extends HttpServlet {
             user = userOptional.get();
             req.setAttribute("username", user.getUsername());
             req.setAttribute("email", user.getEmail());
-
-
         }
 
         getServletContext().getRequestDispatcher("/WEB-INF/view/editprofile.jsp").forward(req, resp);
@@ -62,31 +49,29 @@ public class EditProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String message ="";
-
         req.setAttribute("username", user.getUsername());
-        req.setAttribute("email", user.getEmail());
+        req.getSession().setAttribute("email", user.getEmail());
 
-        if(req.getParameter("editphoto")!= null){
-            Part part = req.getPart("file");
-            DbFile dbFile = fileService.upload(part.getSubmittedFileName(), part.getInputStream());
-            resp.sendRedirect(req.getContextPath()+"/edit");
-            return;
-        }
-        if(req.getParameter("editbtn") != null){
+//        if(req.getParameter("editphoto")!= null){
+//            Part part = req.getPart("file");
+//            DbFile dbFile = fileService.upload(part.getSubmittedFileName(), part.getInputStream());
+//            resp.sendRedirect(req.getContextPath()+"/edit");
+//            return;
+//        }
+
+        if(req.getParameter("upload") != null){
             String username =  req.getParameter("username");
             String email = req.getParameter("email");
             try{
                 if(!user.getUsername().equals(username) || !user.getEmail().equals(email)){
-                    Part part = req.getPart("userAvatar");
-                    long num = (long) (Math.random() * 10000);
-                    //fileService.upload(num+"_"+part.getSubmittedFileName(), part.getInputStream());
                     User newuser = new User(email,username,user.getId());
                     userService.updateUser(user,newuser);
-                    req.getSession().setAttribute("email", newuser.getEmail());
+                    user = newuser;
+
+                    resp.sendRedirect(req.getRequestURI()+"?status=1");
+                    return;
                 }
 
-                resp.sendRedirect(req.getRequestURI()+"?status=1");
-                return;
             }
             catch (DuplicateDataException e){
                 message= "Такой email существует!";

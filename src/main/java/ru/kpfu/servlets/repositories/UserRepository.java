@@ -91,7 +91,7 @@ public class UserRepository implements IUserRepository {
 
     @Override
     public Optional<User> findByEmail(String email) {
-        FileRepository fileRepository = new FileRepository();
+        //FileRepository fileRepository = new FileRepository();
         try(PreparedStatement st = con.prepareStatement(Queries.FIND_USER_BY_EMAIL)){
 
             st.setString(1, String.valueOf(email));
@@ -102,10 +102,10 @@ public class UserRepository implements IUserRepository {
                     String username = result.getString("username");
                     String pass = result.getString("password");
                     long id = (long) result.getLong("id");
-                    long avatarId = result.getLong("avatar");
+                    //long avatarId = result.getLong("avatar");
                     User user = new User(email,pass,username);
                     user.setId(id);
-                    user.setAvatar(fileRepository.findById(avatarId).get());
+                    //user.setAvatar(fileRepository.findById(avatarId).get());
                     return Optional.of(user);
                 }
             }
@@ -140,7 +140,7 @@ public class UserRepository implements IUserRepository {
             }
             st2.setString(1, newuser.getUsername());
             st2.setString(2, newuser.getEmail());
-            st2.setLong(4, newuser.getId());
+            st2.setLong(3, newuser.getId());
 
             st2.execute();
 
@@ -181,7 +181,7 @@ public class UserRepository implements IUserRepository {
 
     @Override
     public Optional<User> findById(Long id) {
-        FileRepository fileRepository = new FileRepository();
+        //FileRepository fileRepository = new FileRepository();
         try(PreparedStatement st = con.prepareStatement(Queries.FIND_USER_BY_ID)){
 
             st.setLong(1, id);
@@ -195,7 +195,7 @@ public class UserRepository implements IUserRepository {
                     long avatarId = result.getLong("avatar");
                     User user = new User(email,pass,username);
                     user.setId(id);
-                    user.setAvatar(fileRepository.findById(avatarId).get());
+                    //user.setAvatar(fileRepository.findById(avatarId).get());
                     return Optional.of(user);
                 }
             }

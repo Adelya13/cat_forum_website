@@ -44,8 +44,6 @@ public class ForumServlet extends HttpServlet {
         if (userOptional.isPresent()) {
             user = userOptional.get();
             show(req);
-
-
         }
         getServletContext().getRequestDispatcher("/WEB-INF/view/forum.jsp").forward(req, resp);
     }

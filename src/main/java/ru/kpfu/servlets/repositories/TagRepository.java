@@ -25,22 +25,24 @@ public class TagRepository implements ITagRepository{
     }
     @Override
     public long addTag(Tag tag) {
-        long id = findTagByName(tag.getTagName());
-        if(id == -1){
+        long id;
+        try {
+             id = findTagByName(tag.getTagName());
+             return id;
+        }catch (NotFoundTagException e1){
             try(PreparedStatement st = con.prepareStatement(Queries.ADD_TAG)){
 
                 st.setString(1,tag.getTagName());
                 st.execute();
-
                 id = findTagByName(tag.getTagName());
+                return id;
 
             }
             catch (SQLException e) {
                 e.printStackTrace();
             }
         }
-
-        return id;
+        return -1;
     }
 
     @Override

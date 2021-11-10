@@ -6,7 +6,7 @@
 <div class="card recipe-card">
     <div class="card-header recipe-title">
         <h4><a href="<c:url value="/post?id=${post.id}"/>">${post.name}</a></h4>
-        <h6><a href="#">${post.authorName}</a></h6>
+        <h6><a href="<c:url value="/user?id=${post.authorId}"/>">${post.authorName}</a></h6>
     </div>
 
 

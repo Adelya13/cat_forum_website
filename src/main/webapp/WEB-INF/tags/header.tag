@@ -19,7 +19,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<c:url value="/edit"/>">Настройки</a>
                     </li>
-                    <button type="submit" id="changeTheam">change</button>
+<%--                    <button type="submit" id="changeTheam">change</button>--%>
                 </ul>
             </div>
         </div>

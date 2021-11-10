@@ -44,7 +44,6 @@ public class PostServlet extends HttpServlet {
             }
         }
         long id = Long.parseLong(req.getParameter("id"));
-        System.out.println(id);
         Optional<Post> postOptional = postService.findById(id);
 
         if(postOptional.isPresent()){
@@ -92,6 +91,7 @@ public class PostServlet extends HttpServlet {
         req.setAttribute("authorName", post.getAuthor().getUsername());
         req.setAttribute("postBody", post.getTextBody());
         req.setAttribute("tags",post.getTags());
+        req.setAttribute("authorId",post.getAuthorId());
     }
 
 
