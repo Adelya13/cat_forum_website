@@ -1,11 +1,10 @@
 package ru.kpfu.servlets.data;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
+import ru.kpfu.servlets.entities.User;
 import ru.kpfu.servlets.inside.AdminInformation;
 import ru.kpfu.servlets.inside.Properties;
-import ru.kpfu.servlets.servies.SecurityService;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

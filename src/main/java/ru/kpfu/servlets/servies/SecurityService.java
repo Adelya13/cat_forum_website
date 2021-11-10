@@ -1,12 +1,11 @@
 package ru.kpfu.servlets.servies;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import ru.kpfu.servlets.data.DBAssistant1;
-import ru.kpfu.servlets.data.User;
+import ru.kpfu.servlets.entities.User;
 
 public class SecurityService {
     private static final String id ="id";

@@ -10,11 +10,8 @@
             <input type="text" name="username" placeholder="username"/>
             <input type="email" name="email" placeholder="email"/>
             <input type="password" name="password" placeholder="password"/>
-
             <div>${message}</div>
-
             <button class="btn my-btn" type="submit" name="loginbtn">login</button>
-
             <p class="message">Registered? <button type="submit" name="signinbtn" >Sign in to your account</button> </p>
 
         </form>

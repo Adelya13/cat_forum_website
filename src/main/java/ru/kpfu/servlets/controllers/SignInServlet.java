@@ -1,16 +1,13 @@
 package ru.kpfu.servlets.controllers;
 
 
-import ru.kpfu.servlets.data.RegistrationSystem;
+import ru.kpfu.servlets.entities.User;
 import ru.kpfu.servlets.exceptions.NotFoundUserException;
 import ru.kpfu.servlets.exceptions.WrongPasswordException;
-import ru.kpfu.servlets.inside.AdminInformation;
-import ru.kpfu.servlets.servies.RegistrationService;
+import ru.kpfu.servlets.servies.UserService;
 import ru.kpfu.servlets.validators.EmailValidator;
 import ru.kpfu.servlets.validators.PassValidator;
-import ru.kpfu.servlets.servies.SecurityService;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,14 +18,18 @@ import java.io.IOException;
 @WebServlet("/signin")
 public class SignInServlet extends HttpServlet {
 
-    private RegistrationService service;
+    private UserService service;
 
-//    @Override
-//    public void init(ServletConfig config) throws ServletException {
-//        this.service = new RegistrationService();
-//    }
+    @Override
+    public void init(){
+        this.service = new UserService();
+    }
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
         getServletContext().getRequestDispatcher("/WEB-INF/view/signin.jsp").forward(req, resp);
     }
 
@@ -47,10 +48,9 @@ public class SignInServlet extends HttpServlet {
 
             if(emailValidator.checkMail() && passValidator.checkPassword()) {
                 try{
-                    this.service = new RegistrationService();
-                    service.signIn(email,password);
-                    req.getSession().setAttribute("email", email);
-                    resp.sendRedirect("/user");
+                    User user = service.signin(email,password);
+                    req.getSession().setAttribute("email", user.getEmail());
+                    resp.sendRedirect(req.getContextPath()+"/profile");
                     return;
                 }
                 catch (NotFoundUserException e){
@@ -59,16 +59,7 @@ public class SignInServlet extends HttpServlet {
                 catch(WrongPasswordException e){
                     message="Не верный пароль";
                 }
-//                if(SecurityService.signIn(req,resp,email,password)){
-//                    req.setAttribute("email",email);
-//                    getServletContext().getRequestDispatcher("/WEB-INF/view/user.jsp").forward(req, resp);
-//
-//                    return;
-//                }
-//                else{
-//                    message = "User is not find";
-//
-//                }
+
             } else message ="Данные не коректны!";
 
             req.setAttribute("message",message);
@@ -82,13 +73,7 @@ public class SignInServlet extends HttpServlet {
             resp.sendRedirect(req.getContextPath()+"/login");
 
         }
-
-
-
     }
-
-
-
 }
 
 

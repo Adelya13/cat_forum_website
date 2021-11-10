@@ -1,15 +1,10 @@
 package ru.kpfu.servlets.controllers;
 
-import ru.kpfu.servlets.data.DBAssistant1;
 import ru.kpfu.servlets.exceptions.DuplicateDataException;
-import ru.kpfu.servlets.exceptions.NotFoundUserException;
-import ru.kpfu.servlets.exceptions.WrongPasswordException;
-import ru.kpfu.servlets.servies.RegistrationService;
+import ru.kpfu.servlets.servies.UserService;
 import ru.kpfu.servlets.validators.EmailValidator;
 import ru.kpfu.servlets.validators.PassValidator;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,11 +16,11 @@ import java.io.*;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
-    private RegistrationService service;
+    private UserService service;
 
     @Override
-    public void init() throws ServletException {
-        this.service = new RegistrationService();
+    public void init(){
+        this.service = new UserService();
     }
 
 
@@ -53,22 +48,13 @@ public class LoginServlet extends HttpServlet {
             if(emailValidator.checkMail() && passValidator.checkPassword()) {
 
                 try{
-                    service.logIn(username,email,password);
-                    resp.sendRedirect("/signIn");
+                    service.login(username,email,password);
+                    resp.sendRedirect(req.getContextPath()+"/signin");
                     return;
                 }
                 catch (DuplicateDataException e){
                     message = "Такой пользователь уже существует";
                 }
-
-
-//                DBAssistant1 query = new DBAssistant1(username,email,password);
-//                if( query.sentDatatoDB(resp)){
-//                    req.setAttribute("message","You are registered");
-//                    getServletContext().getRequestDispatcher("/WEB-INF/view/signin.jsp").forward(req, resp);
-//                    return;
-//                }
-//                message = "Such user is already registered";
 
             } else message ="Данные не коректны!";
 
@@ -83,12 +69,7 @@ public class LoginServlet extends HttpServlet {
 
 
         }
-
-
     }
-
-
-
 }
 
 
